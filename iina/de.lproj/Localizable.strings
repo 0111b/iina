@@ -5,8 +5,8 @@
   Created by lhc on 3/1/2017.
   Copyright © 2017 lhc. All rights reserved.
 */
-
 // Common
+
 "general.on" = "Ein";
 "general.off" = "Aus";
 "general.login" = "Anmelden";
@@ -16,16 +16,13 @@
 "general.username" = "Benutzername";
 "general.password" = "Passwort";
 
-// PlaylistViewController.swift
-"playlist.playlist_cap" = "WIEDERGABELISTE";
-"playlist.chapter_cap" = "KAPITEL";
-
 // MainWindowController.swift
 "main.buffering_indicator" = "Puffern … %d%%";
+"main.opening_stream" = "Stream öffnen …";
 
 // QuickSettingViewController.swift
 "quicksetting.item_default" = "Standard";
-"quicksetting.item_none" = "Aus";
+"quicksetting.item_none" = "Nein";
 
 // OSDMessage.swift
 "osd.pause" = "Pause";
@@ -60,6 +57,7 @@
 "osd.video_eq.saturation" = "Sättigung: %i";
 "osd.video_eq.brightness" = "Helligkeit: %i";
 "osd.find_online_sub" = "Online nach Untertiteln suchen …";
+"osd.find_online_sub.source" = "Quelle:";
 "osd.sub_not_found" = "Keine Untertitel gefunden";
 "osd.sub_found" = "%d Untertitel gefunden. Laden …";
 "osd.sub_downloaded" = "Untertitel geladen";
@@ -68,21 +66,28 @@
 "osd.file_error" = "Lesefehler";
 "osd.cannot_login" = "Anmeldung fehlgeschlagen";
 "osd.canceled" = "Abgebrochen";
+"osd.filter_added" = "Filter \"%@\" hinzugefügt";
+"osd.filter_removed" = "Filter gelöscht";
 
 "preference.title" = "Einstellungen";
 "preference.general" = "Allgemein";
 "preference.ui" = "Aussehen";
-"preference.codec" = "Codec";
+"preference.video_audio" = "Video/Audio";
 "preference.subtitle" = "Untertitel";
 "preference.network" = "Netzwerk";
 "preference.control" = "Steuerung";
 "preference.keybindings" = "Kurzbefehle";
 "preference.advanced" = "Erweitert";
+"preference.utilities" = "Werkzeuge";
 "preference.scripts" = "Skripte";
 "preference.not_logged_in" = "Nicht angemeldet";
 "preference.logged_in_as" = "Angemeldet als %@";
+"preference.system_media_control" = "Nutze Medienkontrolltasten des Systems";
 
-"menu.volume"= "Lautstärke: %d";
+"preference.key_binding_hint_1" = "Um Kurzbefehle der ausgewählten Konfiguration zu bearbeiten, klicke vorher auf „Duplizieren …“, um eine Kopie zu erstellen.";
+"preference.key_binding_hint_2" = "Klicke doppelt auf eine Reihe, um den entsprechenden Kurzbefehl zu bearbeiten.";
+
+"menu.volume" = "Lautstärke: %d";
 "menu.audio_delay" = "Audioverzögerung: %.2f s";
 "menu.sub_delay" = "Untertitelverzögerung: %.2f s";
 "menu.fullscreen" = "Vollbildmodus";
@@ -91,10 +96,28 @@
 "menu.exit_pip" = "Bild-in-Bild schließen";
 "menu.pause" = "Pause";
 "menu.resume" = "Wiedergabe";
+"menu.speed" = "Geschwindigkeit: %.2fx";
 
-"track.none" = "<Leer>";
+"menu.seek_forward" = "%.0f s vorspulen";
+"menu.seek_backward" = "%.0f s zurückspulen";
+"menu.speed_up" = "Beschleunigen auf %.1fx";
+"menu.speed_down" = "Verlangsamen auf %.1fx";
+"menu.volume_up" = "Lautstärke + %.0f%%";
+"menu.volume_down" = "Lautstärke − %.0f%%";
+"menu.audio_delay_up" = "Audioverzögerung + %.1f s";
+"menu.audio_delay_down" = "Audioverzögerung − %.1f s";
+"menu.sub_delay_up" = "Untertitelverzögerung + %.1f s";
+"menu.sub_delay_down" = "Untertitelverzögerung − %.1f s";
+
+"track.none" = "Keine";
+
+"subtrack.no_loaded" = "Keine Untertitel geladen";
+"subtrack.no_external" = "Keine externen Untertitel gefunden";
 
 // Alerts
+"alert.beta_channel.title" = "Updates für Beta-Versionen erhalten";
+"alert.beta_channel.message" = "IINA Version 1.0 kommt! Willst Du uns helfen die Beta Versionen zu testen? Du kannst diese Einstellungen jederzeit unter \"Einstellungen - Allgemein\" wieder ändern.";
+
 "alert.title_error" = "Fehler";
 "alert.title_warning" = "Warnung";
 "alert.title_info" = "Information";
@@ -105,8 +128,8 @@
 
 "alert.unsupported_audio" = "Externe Audiodatei nicht unterstützt.";
 "alert.unsupported_sub" = "Externe Untertiteldatei nicht untersützt.";
-"alert.unsupported_url" = "URL nicht unterstützt.";
-"alert.wrong_url_format" = "Falsches URL-Format.";
+"alert.unsupported_url" = "Adresse nicht unterstützt.";
+"alert.wrong_url_format" = "Falsches Adressformat.";
 
 "alert.error_open" = "Datei oder Stream konnte nicht geöffnet werden.";
 "alert.error_finding_file" = "Die Datei %@ konnte nicht gefunden werden.";
@@ -120,9 +143,9 @@
 "alert.config.duplicate.message" = "Bitte gib einen Namen für die duplizierte Konfiguration ein.";
 "alert.config.empty_name" = "Der Name darf nicht leer sein.";
 "alert.config.name_existing" = "Der Name existiert bereits.";
-"alert.config.file_existing.title" = "Die Datei existiert bereits";
+"alert.config.file_existing.title" = "Die Datei existiert bereits.";
 "alert.config.file_existing.message" = "Das sollte nicht passieren. Wähle OK zum überschreiben oder Abbrechen, um die Datei im Finder anzuzeigen.";
-"alert.config.cannot_create" = "Konfigurationsdatei konnte nicht erstellt werden.";
+"alert.config.cannot_create" = "Konfigurationsdatei konnte nicht erstellt werden.\n%@";
 "alert.config.cannot_write" = "Konfigurationsdatei nicht beschreibbar.";
 
 "alert.filter.incorrect" = "Fehler beim Setzen der Filter. Bitte überprüfe die Parameter.";
@@ -156,9 +179,12 @@
 "alert.opensub.login.title" = "Anmeldung bei OpenSubtitles";
 "alert.opensub.login.message" = "Bitte gib Benutzername und Passwort ein.";
 
-"alert.open_url.title" = "URL öffnen";
-"alert.open_url.message" = "Bitte URL eingeben:";
+"alert.open_url.title" = "Adresse öffnen";
+"alert.open_url.message" = "Bitte Adresse eingeben:";
 "alert.choose_media_file.title" = "Datei auswählen";
+
+"alert.add_url.title" = "Adresse hinzufügen";
+"alert.add_url.message" = "Bitte Adresse eingeben:";
 
 "alert.delete_history.title" = "Wiedergabeverlauf löschen";
 "alert.delete_history.message" = "Möchtest du die ausgewählten Einträge wirklich löschen?";
@@ -170,8 +196,28 @@
 
 "alert.clear_cache.title" = "Vorschaubilder-Cache leeren";
 "alert.clear_cache.message" = "Möchtest du den Cache der Vorschaubilder wirklich leeren?";
-"alert.clear_cache.success" = "Cache geleert.";
 
+"alert.clear_history.title" = "Wiedergabeverlauf löschen";
+"alert.clear_history.message" = "Möchtest du den Wiedergabeverlauf löschen?";
+
+"alert.clear_watch_later.title" = "Gesicherten Wiedergabefortschritt löschen";
+"alert.clear_watch_later.message" = "Möchtest du den Wiedergabefortschritt aller Videos löschen?";
+
+"alert.nothing_to_open" = "Nichts zu öffnen.";
+
+"alert.no_video_track" = "Keine Videospur vorhanden.";
+
+"alert.duplicate_config" = "Du kannst die Standardeinstellungen nicht direkt bearbeiten. Bitte dupliziere diese vorher.";
+
+"alert.assrt_register" = "Bitte erstelle Dir ein eigenes API-Token. Das hier voreingestellte Token ist nur für Testzwecke und kann zu Netzwerfehlern führen.";
+"alert.assrt_register.register" = "Jetzt registrieren";
+"alert.assrt_register.try" = "Testen";
+"alert.assrt_token_prompt.title" = "Bitte API token hier eingeben.";
+"alert.assrt_token_prompt.message" = "Bitte auf der jetzt geöffneten Internetseite registrieren. Das Token kannst du auf deiner User-Seite finden. Bitte hier eingeben:";
+"alert.assrt_token_invalid" = "Dein Assrt API token schein ungültig zu sein.";
+
+"playlist.total_length" = "%@ insgesamt";
+"playlist.total_length_with_selected" = "%@ von %@ ausgewählt";
 "pl_menu.title_multi" = "%d Dateien";
 "pl_menu.play_next" = "Als nächstes wiedergeben";
 "pl_menu.play_in_new_window" = "In neuem Fenster wiedergeben";
@@ -182,14 +228,18 @@
 "pl_menu.delete_after_play" = "Nach Wiedergabe in den Papierkorb legen";
 "pl_menu.delete_after_play_multi" = "Auswahl nach Wiedergabe in den Papierkorb legen";
 "pl_menu.reveal_in_finder" = "Im Finder anzeigen";
-"pl_menu.add_item" = "Datei hinzufügen …";
+"pl_menu.add_file" = "Datei hinzufügen …";
+"pl_menu.add_url" = "Adresse hinzufügen …";
 "pl_menu.clear_playlist" = "Wiedergabeliste leeren";
 "pl_menu.matched_sub" = "%d passende Untertitel";
 "pl_menu.add_sub" = "Untertitel hinzufügen …";
 "pl_menu.wrong_sub" = "Falscher Untertitel!";
+"pl_menu.browser" = "In Browser öffnen";
+"pl_menu.copy_url" = "URL kopieren";
+"pl_menu.copy_url_multi" = "URLs kopieren";
 
 "keymapping.title" = "Kurzbefehle";
-"keymapping.message" = "Zur Aufnahme beliebige Taste drücken.";
+"keymapping.message" = "Zum Zuweisen beliebige Taste(n) drücken.";
 
 "filter.video_filters" = "Videofilter";
 "filter.audio_filters" = "Audiofilter";
@@ -198,11 +248,17 @@
 "hwdec.auto" = "Hardwaredecoding aktiviert. Die meisten Videofilter werden nicht richtig funktionieren.";
 "hwdec.auto-copy" = "Hardwaredecoding aktiviert. Benötigt doppelten Speicher, funktioniert aber mit Videofiltern.";
 
+"subencoding.auto" = "Automatisch bestimmen";
+
+"osc_toolbar.settings" = "Einstellungspanel";
+"osc_toolbar.playlist" = "Wiedergabeliste und Kapitel";
+"osc_toolbar.pip" = "Bild-in-Bild ein-/ausschalten";
+"osc_toolbar.full_screen" = "Vollbild ein-/ausschalten";
+"osc_toolbar.music_mode" = "Musikmodus";
+"osc_toolbar.sub_track" = "Untertitelspur auswählen";
+
 // Touch bar
 
-"touchbar.play_pause" = "Wiedergabe / Pause";
-"touchbar.seek" = "Verlauf";
-"touchbar.time" = "Position";
 "touchbar.ahead_15" = "15 Sekunden vor";
 "touchbar.ahead_30" = "30 Sekunden vor";
 "touchbar.back_15" = "15 Sekunden zurück";
@@ -213,3 +269,8 @@
 "touchbar.decrease_volume" = "Lautstärke verringern";
 "touchbar.rewind" = "Zurückspulen";
 "touchbar.fast_forward" = "Vorspulen";
+"touchbar.play_pause" = "Wiedergabe / Pause";
+"touchbar.seek" = "Verlauf";
+"touchbar.time" = "Position";
+"touchbar.remainingTime" = "Verbleibende Zeit";
+"touchbar.toggle_pip" = "Bild-in-Bild ein-/ausschalten";

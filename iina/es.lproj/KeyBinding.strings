@@ -1,4 +1,4 @@
-/* 
+/*
   KeyBinding.strings
   iina
 
@@ -8,7 +8,7 @@
 
 "cmd.ignore" = "Ignorar";
 "cmd.seek" = "Buscar";
-"cmd.revert-seek" = "Revertir buscar";
+"cmd.revert-seek" = "Revertir búsqueda";
 "cmd.set" = "Establecer";
 "cmd.cycle" = "Alternar";
 "cmd.cycle-values" = "Alternar entre";
@@ -17,7 +17,7 @@
 "cmd.frame-step" = "Fotograma siguiente";
 "cmd.frame-back-step" = "Fotograma anterior";
 "cmd.ab-loop" = "Bucle A-B";
-"cmd.sub-seek" = "Buscar subs";
+"cmd.sub-seek" = "Buscar subtítulo";
 "cmd.playlist-next" = "Siguiente";
 "cmd.playlist-prev" = "Anterior";
 "cmd.playlist-move" = "Mover elemento de la lista de reproducción";
@@ -29,15 +29,16 @@
 "cmd.quit" = "Salir";
 "cmd.quit-watch-later" = "Salir (guardar progreso)";
 "cmd.screenshot" = "Captura de pantalla";
-"cmd.screenshot-to-file" = "Screenshot to file";
-"cmd.loadfile" = "Carga Archivo";
-"cmd.loadlist" = "Cargar lista de reproducción";
-"cmd.run" = "Ejecutar";
+"cmd.screenshot-to-file" = "Captura de pantalla en archivo";
+"cmd.loadfile" = "Abrir Archivo";
+"cmd.loadlist" = "Abrir lista de reproducción";
+"cmd.run" = "Reproducir";
 
-"iina.flip" = "Voltear";
+"iina.flip" = "Girar";
 "iina.mirror" = "Reflejar";
 
-"iina.toggle-pip" = "Alternar picture in picture";
+"iina.toggle-pip" = "Alternar Picture-in-Picture";
+"iina.toggle-music-mode" = "Alternar Modo Música";
 "iina.open-file" = "Abrir archivo";
 "iina.open-url" = "Abrir URL";
 "iina.video-panel" = "Panel de vídeo";
@@ -45,10 +46,14 @@
 "iina.sub-panel" = "Panel de subtítulos";
 "iina.playlist-panel" = "Panel de listas de reproducción";
 "iina.chapter-panel" = "Panel de capítulos";
+"iina.bigger-window" = "Ventana más grande";
+"iina.smaller-window" = "Ventana más pequeña";
+"iina.fit-to-screen" = "Ajustar a la Pantalla";
 "iina.toggle-flip" = "Alternar volteo";
 "iina.toggle-mirror" = "Alternar reflejo";
 "iina.save-playlist" = "Guardar la lista de reproducción actual";
 "iina.delete-current-file" = "Eliminar archivo actual";
+"iina.delete-current-file-hard" = "Eliminar el archivo actual directamente sin mover a la papelera";
 "iina.find-online-subs" = "Buscar subtítulos en línea";
 "iina.save-downloaded-sub" = "Guardar subtítulos descargados";
 
@@ -60,13 +65,11 @@
 "add" = "incrementar";
 "minus" = "disminuir";
 "forward" = "adelantar";
-"backward" = "restroceder";
-"seek-to" = "to";
+"backward" = "retroceder";
+"seek-to" = "a";
 
 "relative" = "s";
 "absolute" = "s";
-"absolute-percent" = "%";
-"relative-percent" = "%";
 "relative+exact" = "s (exacto)";
 "relative-percent+exact" = "% (exacto)";
 "absolute+keyframe" = "s (Fotograma)";
@@ -74,6 +77,8 @@
 
 "opt.pause" = "Pausa";
 "opt.speed" = "Velocidad";
+
+"opt.window-scale" = "Escala de la ventana";
 
 "opt.video" = "Pista de vídeo";
 "opt.video-aspect" = "Proporción del vídeo";
@@ -100,11 +105,10 @@
 
 "opt.chapter" = "Capítulo";
 
-
 "read.set" = "Establecer {{property}} a {{value}}";
 "read.add" = "{{property}} {{value}}";
 "read.multiply" = "Multiplicar {{property}} por {{factor}}x";
 "read.cycle" = "Alternar {{property}}{{#dir_down}} Downwards{{/dir_down}}";
 "read.cycle-values" = "Alternar {{property}} entre ({{{values}}})";
-"read.seek" = "Seek {{#fwd}}forward{{/fwd}}{{#bwd}}backward{{/bwd}}{{#abs}}to{{/abs}} {{value}}{{#sec}}s{{/sec}}{{#per}}%{{/per}} {{#exact}}(exact){{/exact}}{{#kf}}(keyframe){{/kf}}";
-"read.sub-seek" = "Seek to {{#skip_1}}next{{/skip_1}}{{#skip_-1}}previous{{/skip_-1}} subtitle";
+"read.seek" = "Buscar {{#fwd}}adelante{{/fwd}}{{#bwd}}hacia atrás{{/bwd}}{{#abs}}a{{/abs}} {{value}}{{#sec}}s{{/sec}}{{#per}}%{{/per}} {{#exact}}(exacto){{/exact}}{{#kf}}(fotograma){{/kf}}";
+"read.sub-seek" = "Buscar el {{#skip_1}}siguiente{{/skip_1}}{{#skip_-1}}anterior{{/skip_-1}} subtítulo";

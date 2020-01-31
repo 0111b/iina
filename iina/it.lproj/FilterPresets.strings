@@ -1,13 +1,13 @@
 /*
- FilterPresets.strings
- iina
- 
- Created by lhc on 25/8/2017.
- Copyright © 2017 lhc. All rights reserved.
- */
+  FilterPresets.strings
+  iina
 
-
+  Created by lhc on 25/8/2017.
+  Copyright © 2017 lhc. All rights reserved.
+*/
 /* It's optional to localize descriptions for each parameter! */
+
+
 
 "crop" = "Ritaglio";
 "crop.w" = "Larghezza (default: larghezza video)";
@@ -42,7 +42,11 @@
 "vflip" = "Capovolgi";
 "hflip" = "Specchio";
 
-"custom_mpv" = "Personalizzato (MPV)";
+"lut3d" = "3D LUT";
+"lut3d.file" = "File";
+"lut3d.interp" = "Modalità di interpolazione";
+
+"custom_mpv" = "Personalizzato (mpv)";
 "custom_mpv.name" = "Nome filtro";
 "custom_mpv.string" = "Valore filtro";
 

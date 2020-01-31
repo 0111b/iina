@@ -1,25 +1,25 @@
 /*
- KeyBinding.strings
- iina
- 
- Created by lhc on 4/2/2017.
- Copyright © 2017 lhc. All rights reserved.
- */
+  KeyBinding.strings
+  iina
+
+  Created by lhc on 4/2/2017.
+  Copyright © 2017 lhc. All rights reserved.
+*/
 
 "cmd.ignore" = "Ignora";
 "cmd.seek" = "Scorri";
 "cmd.revert-seek" = "Scorri indietro";
 "cmd.set" = "Imposta";
-"cmd.cycle" = "Ciclo";
-"cmd.cycle-values" = "Ciclo in";
+"cmd.cycle" = "Cicla";
+"cmd.cycle-values" = "Cicla in";
 "cmd.add" = "Cambia";
 "cmd.multiply" = "Moltiplica";
-"cmd.frame-step" = "Frame successivo";
-"cmd.frame-back-step" = "Frame precedente";
-"cmd.ab-loop" = "A-B loop";
+"cmd.frame-step" = "Fotogramma successivo";
+"cmd.frame-back-step" = "Fotogramma precedente";
+"cmd.ab-loop" = "Ripeti A-B";
 "cmd.sub-seek" = "Scorri sottotitoli";
-"cmd.playlist-next" = "Media successivo";
-"cmd.playlist-prev" = "Media precedente";
+"cmd.playlist-next" = "Elemento successivo";
+"cmd.playlist-prev" = "Elemento precedente";
 "cmd.playlist-move" = "Muovi elementi della playlist";
 "cmd.playlist-clear" = "Cancella playlist";
 "cmd.playlist-remove" = "Rimuovi";
@@ -28,8 +28,8 @@
 "cmd.stop" = "Stop";
 "cmd.quit" = "Esci";
 "cmd.quit-watch-later" = "Esci (salva stato attuale)";
-"cmd.screenshot" = "Screenshot";
-"cmd.screenshot-to-file" = "Screenshot al file";
+"cmd.screenshot" = "Schermata";
+"cmd.screenshot-to-file" = "Schermata al file";
 "cmd.loadfile" = "Carica file";
 "cmd.loadlist" = "Carica playlist";
 "cmd.run" = "Run";
@@ -38,6 +38,7 @@
 "iina.mirror" = "Specchia";
 
 "iina.toggle-pip" = "Inverti Picture-in-Picture";
+"iina.toggle-music-mode" = "Inverti la modalità musica";
 "iina.open-file" = "Apri file";
 "iina.open-url" = "Apri URL";
 "iina.video-panel" = "Pannello video";
@@ -45,10 +46,14 @@
 "iina.sub-panel" = "Pannello sottotitoli";
 "iina.playlist-panel" = "Pannello playlist";
 "iina.chapter-panel" = "Pannello capitoli";
+"iina.bigger-window" = "Aumenta dimensione";
+"iina.smaller-window" = "Riduci dimensione";
+"iina.fit-to-screen" = "Adatta lo schermo";
 "iina.toggle-flip" = "Inverti capovolgi";
 "iina.toggle-mirror" = "Inverti specchia";
 "iina.save-playlist" = "Salva playlist corrente";
 "iina.delete-current-file" = "Sposta nel cestino file corrente";
+"iina.delete-current-file-hard" = "Elimina il file corrente senza spostarlo nel cestino";
 "iina.find-online-subs" = "Trova sottotitoli online";
 "iina.save-downloaded-sub" = "Salva i sottotitoli scaricati";
 
@@ -65,8 +70,6 @@
 
 "relative" = "i";
 "absolute" = "i";
-"absolute-percent" = "%";
-"relative-percent" = "%";
 "relative+exact" = "i (esatti)";
 "relative-percent+exact" = "% (esatto)";
 "absolute+keyframe" = "i (fotogrammi)";
@@ -74,6 +77,8 @@
 
 "opt.pause" = "Pausa";
 "opt.speed" = "Velocità";
+
+"opt.window-scale" = "Dimensione finestra";
 
 "opt.video" = "Traccia video";
 "opt.video-aspect" = "Aspetto video";
@@ -86,7 +91,7 @@
 "opt.audio" = "Traccia audio";
 "opt.volume" = "Volume";
 "opt.mute" = "Silenzio";
-"opt.audio-delay" = "Rirtardo audio";
+"opt.audio-delay" = "Ritardo audio";
 
 "opt.sub" = "Traccia sottotitoli";
 "opt.sub-delay" = "Ritardo sottotitoli";
@@ -95,18 +100,15 @@
 "opt.sub-visibility" = "Visibilità sottotitotli";
 "opt.sub-ass-style-override" = "Sovrascrivi stili ASS";
 
-"opt.fullscreen" = "Schermo intero";
-"opt.ontop" = "Mostra in primo piano";
+"opt.fullscreen" = "A tutto schermo";
+"opt.ontop" = "Sempre in primo piano";
 
 "opt.chapter" = "Capitolo";
-
-
 
 "read.set" = "Imposta {{property}} al {{value}}";
 "read.add" = "{{property}} {{value}}";
 "read.multiply" = "Moltiplica {{property}} per {{factor}}x";
-"read.cycle" = "Cicla {{property}}{{#dir_down}} Verso{{/dir_down}}";
+"read.cycle" = "Cicla {{property}}{{#dir_down}} verso{{/dir_down}}";
 "read.cycle-values" = "Cicla {{property}} in ({{{values}}})";
 "read.seek" = "Scorri {{#fwd}}avanti{{/fwd}}{{#bwd}}indietro{{/bwd}}{{#abs}}a{{/abs}} {{value}}{{#sec}}s{{/sec}}{{#per}}%{{/per}} {{#exact}}(exact){{/exact}}{{#kf}}(keyframe){{/kf}}";
-"read.sub-seek" = "Scorri al {{#skip_1}}successivo{{/skip_1}}{{#skip_-1}}precedente{{/skip_-1}}sottotitolo";
-
+"read.sub-seek" = "Scorri al {{#skip_1}}successivo{{/skip_1}}{{#skip_-1}}precedente{{/skip_-1}} sottotitolo";

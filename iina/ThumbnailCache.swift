@@ -8,10 +8,17 @@
 
 import Cocoa
 
-class ThumbnailCache {
+fileprivate let subsystem = Logger.Subsystem(rawValue: "thumbcache")
 
-  static private let sizeofDouble = MemoryLayout<Double>.size
-  static private let sizeofInt64 = MemoryLayout<Int64>.size
+class ThumbnailCache {
+  private typealias CacheVersion = UInt8
+  private typealias FileSize = UInt64
+  private typealias FileTimestamp = Int64
+
+  static private let version: CacheVersion = 2
+  
+  static private let sizeofMetadata = MemoryLayout<CacheVersion>.size + MemoryLayout<FileSize>.size + MemoryLayout<FileTimestamp>.size
+
 
   static private let imageProperties: [NSBitmapImageRep.PropertyKey: Any] = [
     .compressionFactor: 0.75
@@ -21,12 +28,48 @@ class ThumbnailCache {
     return FileManager.default.fileExists(atPath: urlFor(name).path)
   }
 
-  /// Write thumbnail cache to file. 
-  /// This method is expected to be called when the file doesn't exist.
-  static func write(_ thumbnails: [FFThumbnail], forName name: String) {
-    // Utility.log("Writing thumbnail cache...")
+  static func fileIsCached(forName name: String, forVideo videoPath: URL?) -> Bool {
+    guard let fileAttr = try? FileManager.default.attributesOfItem(atPath: videoPath!.path) else {
+      Logger.log("Cannot get video file attributes", level: .error, subsystem: subsystem)
+      return false
+    }
 
-    let maxCacheSize = Preference.integer(for: .maxThumbnailPreviewCacheSize) * FileSize.Unit.mb.rawValue
+    // file size
+    guard let fileSize = fileAttr[.size] as? FileSize else {
+      Logger.log("Cannot get video file size", level: .error, subsystem: subsystem)
+      return false
+    }
+
+    // modified date
+    guard let fileModifiedDate = fileAttr[.modificationDate] as? Date else {
+      Logger.log("Cannot get video file modification date", level: .error, subsystem: subsystem)
+      return false
+    }
+    let fileTimestamp = FileTimestamp(fileModifiedDate.timeIntervalSince1970)
+
+    // Check metadate in the cache
+    if self.fileExists(forName: name) {
+      guard let file = try? FileHandle(forReadingFrom: urlFor(name)) else {
+        Logger.log("Cannot open cache file.", level: .error, subsystem: subsystem)
+        return false
+      }
+
+      let cacheVersion = file.read(type: CacheVersion.self)
+      if cacheVersion != version { return false }
+
+      return file.read(type: FileSize.self) == fileSize &&
+        file.read(type: FileTimestamp.self) == fileTimestamp
+    }
+
+    return false
+  }
+
+  /// Write thumbnail cache to file.
+  /// This method is expected to be called when the file doesn't exist.
+  static func write(_ thumbnails: [FFThumbnail], forName name: String, forVideo videoPath: URL?) {
+    Logger.log("Writing thumbnail cache...", subsystem: subsystem)
+
+    let maxCacheSize = Preference.integer(for: .maxThumbnailPreviewCacheSize) * FloatingPointByteCountFormatter.PrefixFactor.mi.rawValue
     if maxCacheSize == 0 {
       return
     } else if CacheManager.shared.getCacheSize() > maxCacheSize {
@@ -35,80 +78,99 @@ class ThumbnailCache {
 
     let pathURL = urlFor(name)
     guard FileManager.default.createFile(atPath: pathURL.path, contents: nil, attributes: nil) else {
-      Utility.log("Cannot create file.")
+      Logger.log("Cannot create file.", level: .error, subsystem: subsystem)
       return
     }
     guard let file = try? FileHandle(forWritingTo: pathURL) else {
-      Utility.log("Cannot write to file.")
+      Logger.log("Cannot write to file.", level: .error, subsystem: subsystem)
       return
     }
 
     // version
-    var version = Int64(1)
-    let versionData = Data(bytes: &version, count: sizeofInt64)
+    let versionData = Data(bytesOf: version)
     file.write(versionData)
+
+    guard let fileAttr = try? FileManager.default.attributesOfItem(atPath: videoPath!.path) else {
+      Logger.log("Cannot get video file attributes", level: .error, subsystem: subsystem)
+      return
+    }
+
+    // file size
+    guard let fileSize = fileAttr[.size] as? FileSize else {
+      Logger.log("Cannot get video file size", level: .error, subsystem: subsystem)
+      return
+    }
+    let fileSizeData = Data(bytesOf: fileSize)
+    file.write(fileSizeData)
+
+    // modified date
+    guard let fileModifiedDate = fileAttr[.modificationDate] as? Date else {
+      Logger.log("Cannot get video file modification date", level: .error, subsystem: subsystem)
+      return
+    }
+    let fileTimestamp = FileTimestamp(fileModifiedDate.timeIntervalSince1970)
+    let fileModificationDateData = Data(bytesOf: fileTimestamp)
+    file.write(fileModificationDateData)
 
     // data blocks
     for tb in thumbnails {
-      let timestampData = Data(bytes: &tb.realTime, count: sizeofDouble)
+      let timestampData = Data(bytesOf: tb.realTime)
       guard let tiffData = tb.image?.tiffRepresentation else {
-        Utility.log("Cannot generate tiff data.")
+        Logger.log("Cannot generate tiff data.", level: .error, subsystem: subsystem)
         return
       }
       guard let jpegData = NSBitmapImageRep(data: tiffData)?.representation(using: .jpeg, properties: imageProperties) else {
-        Utility.log("Cannot generate jpeg data.")
+        Logger.log("Cannot generate jpeg data.", level: .error, subsystem: subsystem)
         return
       }
-      var blockLength = Int64(timestampData.count + jpegData.count)
-      let blockLengthData = Data(bytes: &blockLength, count: sizeofInt64)
+      let blockLength = Int64(timestampData.count + jpegData.count)
+      let blockLengthData = Data(bytesOf: blockLength)
       file.write(blockLengthData)
       file.write(timestampData)
       file.write(jpegData)
     }
 
     CacheManager.shared.needsRefresh = true
-    // Utility.log("Finished writing thumbnail cache.")
+    Logger.log("Finished writing thumbnail cache.", subsystem: subsystem)
   }
 
   /// Read thumbnail cache to file.
   /// This method is expected to be called when the file exists.
   static func read(forName name: String) -> [FFThumbnail]? {
-    // Utility.log("Reading thumbnail cache...")
+    Logger.log("Reading thumbnail cache...", subsystem: subsystem)
 
     let pathURL = urlFor(name)
     guard let file = try? FileHandle(forReadingFrom: pathURL) else {
-      Utility.log("Cannot open file.")
+      Logger.log("Cannot open file.", level: .error, subsystem: subsystem)
       return nil
     }
+    Logger.log("Reading from \(pathURL.path)", subsystem: subsystem)
 
     var result: [FFThumbnail] = []
 
     // get file length
     file.seekToEndOfFile()
     let eof = file.offsetInFile
-    file.seek(toFileOffset: 0)
 
-    // version
-    let _ = file.readData(ofLength: sizeofInt64)
+    // skip metadata
+    file.seek(toFileOffset: UInt64(sizeofMetadata))
 
     // data blocks
     while file.offsetInFile != eof {
       // length
-      let lengthData = file.readData(ofLength: sizeofInt64)
-      let blockLength: Int64 = lengthData.withUnsafeBytes { $0.pointee }
+      let blockLength: Int64 = file.read(type: Int64.self)
       // timestamp
-      let timestampData = file.readData(ofLength: sizeofDouble)
-      let timestamp: Double = timestampData.withUnsafeBytes { $0.pointee }
+      let timestamp: Double = file.read(type: Double.self)
       // jpeg
-      let jpegData = file.readData(ofLength: Int(blockLength) - sizeofDouble)
+      let jpegData = file.readData(ofLength: Int(blockLength) - MemoryLayout.size(ofValue: timestamp))
       guard let image = NSImage(data: jpegData) else {
-        Utility.log("Cannot read image. Cache file will be deleted.")
+        Logger.log("Cannot read image. Cache file will be deleted.", level: .warning, subsystem: subsystem)
         file.closeFile()
         // try deleting corrupted cache
         do {
           try FileManager.default.removeItem(at: pathURL)
         } catch {
-          Utility.log("Cannot delete corrupted cache.")
+          Logger.log("Cannot delete corrupted cache.", level: .error, subsystem: subsystem)
         }
         return nil
       }
@@ -120,7 +182,7 @@ class ThumbnailCache {
     }
 
     file.closeFile()
-    // Utility.log("Finished reading thumbnail cache...")
+    Logger.log("Finished reading thumbnail cache, \(result.count) in total", subsystem: subsystem)
     return result
   }
 

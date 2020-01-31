@@ -1,13 +1,13 @@
-/* 
+/*
   FilterPresets.strings
   iina
 
   Created by lhc on 25/8/2017.
   Copyright © 2017 lhc. All rights reserved.
 */
-
-
 /* It's optional to localize descriptions for each parameter! */
+
+
 
 "crop" = "クロップ";
 "crop.w" = "幅 (デフォルト: ビデオの幅)";
@@ -27,7 +27,7 @@
 "sharpen.msize" = "マトリックス";
 "sharpen.amount" = "強さ";
 
-"blur" = "ブラー";
+"blur" = "ぼかし";
 "blur.msize" = "マトリックス";
 "blur.amount" = "強さ";
 
@@ -42,7 +42,11 @@
 "vflip" = "上下反転";
 "hflip" = "左右反転";
 
-"custom_mpv" = "カスタム (MPV)";
+"lut3d" = "3D LUT";
+"lut3d.file" = "ファイル";
+"lut3d.interp" = "補間モード";
+
+"custom_mpv" = "カスタム (mpv)";
 "custom_mpv.name" = "フィルタ名";
 "custom_mpv.string" = "フィルタの値";
 

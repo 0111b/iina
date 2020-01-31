@@ -5,9 +5,9 @@
   Created by lhc on 25/8/2017.
   Copyright © 2017 lhc. All rights reserved.
 */
-
-
 /* It's optional to localize descriptions for each parameter! */
+
+
 
 "crop" = "Rogner";
 "crop.w" = "Largeur (défaut : largeur de la vidéo)";
@@ -42,7 +42,11 @@
 "vflip" = "Retournement";
 "hflip" = "Miroir";
 
-"custom_mpv" = "Personnalisé (MPV)";
+"lut3d" = "3D LUT";
+"lut3d.file" = "Fichier";
+"lut3d.interp" = "Mode d'interpolation";
+
+"custom_mpv" = "Personnalisé (mpv)";
 "custom_mpv.name" = "Nom du filtre";
 "custom_mpv.string" = "Valeur du filtre";
 

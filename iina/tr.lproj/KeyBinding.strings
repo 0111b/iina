@@ -1,4 +1,4 @@
-/* 
+/*
   KeyBinding.strings
   iina
 
@@ -6,105 +6,109 @@
   Copyright © 2017 lhc. All rights reserved.
 */
 
-"cmd.ignore" = "Ignore";
-"cmd.seek" = "Seek";
-"cmd.revert-seek" = "Revert seek";
-"cmd.set" = "Set";
-"cmd.cycle" = "Cycle";
-"cmd.cycle-values" = "Cycle in";
-"cmd.add" = "Change";
-"cmd.multiply" = "Multiply";
-"cmd.frame-step" = "Next frame";
-"cmd.frame-back-step" = "Previous frame";
-"cmd.ab-loop" = "A-B loop";
-"cmd.sub-seek" = "Sub seek";
-"cmd.playlist-next" = "Next media";
-"cmd.playlist-prev" = "Previous media";
-"cmd.playlist-move" = "Move playlist item";
-"cmd.playlist-clear" = "Clear playlist";
-"cmd.playlist-remove" = "Remove current";
-"cmd.playlist-shuffle" = "Shuffle";
-"cmd.write-watch-later-config" = "Record play history";
-"cmd.stop" = "Stop";
-"cmd.quit" = "Quit";
-"cmd.quit-watch-later" = "Quit (save progress)";
-"cmd.screenshot" = "Screenshot";
-"cmd.screenshot-to-file" = "Screenshot to file";
-"cmd.loadfile" = "Load file";
-"cmd.loadlist" = "Load playlist";
-"cmd.run" = "Run";
+"cmd.ignore" = "Atla";
+"cmd.seek" = "Sar";
+"cmd.revert-seek" = "Sarmaya geri dön";
+"cmd.set" = "Ayarla";
+"cmd.cycle" = "Tekrar";
+"cmd.cycle-values" = "Şurada tekrar";
+"cmd.add" = "Değiştir";
+"cmd.multiply" = "Çoğalt";
+"cmd.frame-step" = "Sonraki kare";
+"cmd.frame-back-step" = "Önceki kare";
+"cmd.ab-loop" = "A-B döngüsü";
+"cmd.sub-seek" = "Altyazı ara";
+"cmd.playlist-next" = "Sıradaki medya";
+"cmd.playlist-prev" = "Önceki medya";
+"cmd.playlist-move" = "Dosyayı listeye taşı";
+"cmd.playlist-clear" = "Listeyi temizle";
+"cmd.playlist-remove" = "Şuankini kaldır";
+"cmd.playlist-shuffle" = "Karıştır";
+"cmd.write-watch-later-config" = "Oynatma tarihçesini kaydet";
+"cmd.stop" = "Durdur";
+"cmd.quit" = "Çık";
+"cmd.quit-watch-later" = "Çık (ilerlemeyi kaydet)";
+"cmd.screenshot" = "Ekran Görüntüsü";
+"cmd.screenshot-to-file" = "Dosyaya ekran görüntüsü";
+"cmd.loadfile" = "Dosya yükle";
+"cmd.loadlist" = "Liste yükle";
+"cmd.run" = "Çalıştır";
 
-"iina.flip" = "Flip";
-"iina.mirror" = "Mirror";
+"iina.flip" = "Çevir";
+"iina.mirror" = "Ayna";
 
-"iina.toggle-pip" = "Toggle Picture-in-Picture";
-"iina.open-file" = "Open file";
-"iina.open-url" = "Open URL";
-"iina.video-panel" = "Video panel";
-"iina.audio-panel" = "Audio panel";
-"iina.sub-panel" = "Subtitle panel";
-"iina.playlist-panel" = "Playlist panel";
-"iina.chapter-panel" = "Chapter panel";
-"iina.toggle-flip" = "Toggle flip";
-"iina.toggle-mirror" = "Toggle mirror";
-"iina.save-playlist" = "Save current playlist";
-"iina.delete-current-file" = "Delete current file";
-"iina.find-online-subs" = "Find online subtitles";
-"iina.save-downloaded-sub" = "Save downloaded subtitle";
+"iina.toggle-pip" = "Resim-içinde-Resim (PIP) Aç/Kapa";
+"iina.toggle-music-mode" = "Müzik Modunu Aç/Kapa";
+"iina.open-file" = "Dosya aç";
+"iina.open-url" = "Internet Adresi Aç";
+"iina.video-panel" = "Video paneli";
+"iina.audio-panel" = "Ses paneli";
+"iina.sub-panel" = "Altyazı Paneli";
+"iina.playlist-panel" = "Oynatma Listesi paneli";
+"iina.chapter-panel" = "Bölüm paneli";
+"iina.bigger-window" = "Daha Büyük Pencere";
+"iina.smaller-window" = "Daha Küçük Pencere";
+"iina.fit-to-screen" = "Ekrana Sığdır";
+"iina.toggle-flip" = "Çevirme Aç/Kapa";
+"iina.toggle-mirror" = "Aynalamayı Aç/Kapa";
+"iina.save-playlist" = "Şuanki oynatma listesini kaydet";
+"iina.delete-current-file" = "Şuanki dosyayı sil";
+"iina.delete-current-file-hard" = "Geçerli dosyayı çöp kutusuna taşımadan doğrudan sil";
+"iina.find-online-subs" = "Online altyazılar bul";
+"iina.save-downloaded-sub" = "İndirilen altyazıyı kaydet";
 
-"yes" = "Yes";
-"no" = "No";
-"to" = "to";
-"by" = "by";
+"yes" = "Evet";
+"no" = "Hayır";
+"to" = "Şuraya";
+"by" = "tarafından";
 "in" = "in";
-"add" = "increase";
-"minus" = "decrease";
-"forward" = "forward";
-"backward" = "backward";
-"seek-to" = "to";
+"add" = "Yükselt";
+"minus" = "Azalt";
+"forward" = "İleri";
+"backward" = "Geri";
+"seek-to" = "Şuradan ara";
 
 "relative" = "s";
 "absolute" = "s";
-"absolute-percent" = "%";
-"relative-percent" = "%";
-"relative+exact" = "s (exact)";
-"relative-percent+exact" = "% (exact)";
+"relative+exact" = "s (çıkar)";
+"relative-percent+exact" = "% (çıkar)";
 "absolute+keyframe" = "s (keyframe)";
 "absolute-percent+keyframe" = "% (keyframe)";
 
-"opt.pause" = "Pause";
-"opt.speed" = "Speed";
+"opt.pause" = "Duraklat";
+"opt.speed" = "Hız";
 
-"opt.video" = "Video track";
-"opt.video-aspect" = "Video aspect";
-"opt.contrast" = "Contrast";
-"opt.brightness" = "Brightness";
-"opt.gamma" = "Gamma";
-"opt.saturation" = "Saturation";
-"opt.deinterlace" = "Deinterlace";
+"opt.window-scale" = "Pencere Oranı";
 
-"opt.audio" = "Audio track";
-"opt.volume" = "Volume";
-"opt.mute" = "Mute";
-"opt.audio-delay" = "Audio delay";
+"opt.video" = "Video İzi";
+"opt.video-aspect" = "Video görünüşü";
+"opt.contrast" = "Kontrast";
+"opt.brightness" = "Parlaklık";
+"opt.gamma" = "Gama";
+"opt.saturation" = "Doygunluk";
+"opt.deinterlace" = "Netleştir (Deinterlace)";
 
-"opt.sub" = "Sub track";
-"opt.sub-delay" = "Sub delay";
-"opt.sub-pos" = "Sub pos";
-"opt.sub-scale" = "Sub scale";
-"opt.sub-visibility" = "Sub visibility";
-"opt.sub-ass-style-override" = "ASS style override";
+"opt.audio" = "Ses parçası";
+"opt.volume" = "Ses Yüksekliği";
+"opt.mute" = "Sessiz";
+"opt.audio-delay" = "Ses gecikmesi";
 
-"opt.fullscreen" = "Fullscreen";
-"opt.ontop" = "Float on top";
+"opt.sub" = "Altyazı parçası";
+"opt.sub-delay" = "Altyazı gecikmesi";
+"opt.sub-pos" = "Altyazı pozisyonu";
+"opt.sub-scale" = "Altyazı boyutu";
+"opt.sub-visibility" = "Altyazı opaklığı";
+"opt.sub-ass-style-override" = "ASS tipi üzerine yazma";
 
-"opt.chapter" = "Chapter";
+"opt.fullscreen" = "Tam ekran";
+"opt.ontop" = "Üstte kal";
 
+"opt.chapter" = "Bölüm";
 
-"read.set" = "Set {{property}} to {{value}}";
+"read.set" = "Ayarla {{property}} şuna {{value}}";
 "read.add" = "{{property}} {{value}}";
-"read.multiply" = "Multiply {{property}} by {{factor}}x";
-"read.cycle" = "Cycle {{property}}{{#dir_down}} Downwards{{/dir_down}}";
-"read.cycle-values" = "Cycle {{property}} in ({{{values}}})";
-"read.seek" = "Seek {{#fwd}}forward{{/fwd}}{{#bwd}}backward{{/bwd}}{{#abs}}to{{/abs}} {{value}}{{#sec}}s{{/sec}}{{#per}}%{{/per}} {{#exact}}(exact){{/exact}}{{#kf}}(keyframe){{/kf}}";
-"read.sub-seek" = "Seek to {{#skip_1}}next{{/skip_1}}{{#skip_-1}}previous{{/skip_-1}} subtitle";
+"read.multiply" = "Çoğalt {{property}} tarafından {{factor}}x";
+"read.cycle" = "Döngü {{property}}{{#dir_down}}Aşağı doğru{{/dir_down}}";
+"read.cycle-values" = "Döngü {{property}} şurada ({{{values}}})";
+"read.seek" = "Sar {{#fwd}}ileri{{/fwd}}{{#bwd}}geri{{/bwd}}{{#abs}}şuraya{{/abs}} {{value}}{{#sec}}s{{/sec}}{{#per}}%{{/per}} {{#exact}}(exact){{/exact}}{{#kf}}(keyframe){{/kf}}";
+"read.sub-seek" = "Şuna sar {{#skip_1}}sıradaki{{/skip_1}}{{#skip_-1}}önceki{{/skip_-1}} altyazı";

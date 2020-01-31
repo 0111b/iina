@@ -2,7 +2,7 @@
   KeyBinding.strings
   iina
 
-  Created by Nicolas Allemand on 12/02/2017.
+  Created by lhc on 4/2/2017.
   Copyright © 2017 lhc. All rights reserved.
 */
 
@@ -18,11 +18,11 @@
 "cmd.frame-back-step" = "Image précédente";
 "cmd.ab-loop" = "Boucle A-B";
 "cmd.sub-seek" = "Changer de fichier de sous-titres";
-"cmd.playlist-next" = "Média suivant";
-"cmd.playlist-prev" = "Média précédent";
+"cmd.playlist-next" = "Fichier média suivant";
+"cmd.playlist-prev" = "Fichier média précédent";
 "cmd.playlist-move" = "Déplacer l'élément dans la playlist";
 "cmd.playlist-clear" = "Vider la playlist";
-"cmd.playlist-remove" = "Enlever le média sélectionné de la playlist";
+"cmd.playlist-remove" = "Enlever le fichier en cours de la playlist";
 "cmd.playlist-shuffle" = "Ordre aléatoire";
 "cmd.write-watch-later-config" = "Enregistrer l'historique de lecture";
 "cmd.stop" = "Stopper";
@@ -38,17 +38,22 @@
 "iina.mirror" = "Miroir";
 
 "iina.toggle-pip" = "Activer/désactiver Image dans l'Image";
+"iina.toggle-music-mode" = "Passer en mode musique";
 "iina.open-file" = "Ouvrir un fichier";
-"iina.open-url" = "Ouvrir une URL";
+"iina.open-url" = "Ouvrir une adresse";
 "iina.video-panel" = "Panel vidéo";
 "iina.audio-panel" = "Panel audio";
 "iina.sub-panel" = "Panel des sous-titres";
 "iina.playlist-panel" = "Panel des playlists";
 "iina.chapter-panel" = "Panel des chapitres";
+"iina.bigger-window" = "Fenêtre plus grande";
+"iina.smaller-window" = "Fenêtre plus petite";
+"iina.fit-to-screen" = "Ajuster à l'écran";
 "iina.toggle-flip" = "Activer/désactiver le pivot";
 "iina.toggle-mirror" = "Activer/désactiver le miroir";
 "iina.save-playlist" = "Sauvegarder la playlist";
-"iina.delete-current-file" = "Enlever le fichier sélectionné de la playlist";
+"iina.delete-current-file" = "Supprimer le fichier en cours";
+"iina.delete-current-file-hard" = "Supprimer le fichier en cours sans passer par la corbeille";
 "iina.find-online-subs" = "Trouver des sous-titres en ligne";
 "iina.save-downloaded-sub" = "Sauvegarder les sous-titres téléchargés";
 
@@ -65,15 +70,15 @@
 
 "relative" = "s";
 "absolute" = "s";
-"absolute-percent" = "%";
-"relative-percent" = "%";
 "relative+exact" = "s (exact)";
 "relative-percent+exact" = "% (exact)";
-"absolute+keyframe" = "s (keyframe)";
-"absolute-percent+keyframe" = "% (keyframe)";
+"absolute+keyframe" = "s (image clé)";
+"absolute-percent+keyframe" = "% (image clé)";
 
-"opt.pause" = "Pause";
+"opt.pause" = "Mettre en pause";
 "opt.speed" = "Vitesse";
+
+"opt.window-scale" = "Échelle de la fenêtre";
 
 "opt.video" = "Piste vidéo";
 "opt.video-aspect" = "Format d'image";
@@ -99,7 +104,6 @@
 "opt.ontop" = "Flotter au-dessus";
 
 "opt.chapter" = "Chapitre";
-
 
 "read.set" = "Configurer {{property}} à {{value}}";
 "read.add" = "{{property}} {{value}}";

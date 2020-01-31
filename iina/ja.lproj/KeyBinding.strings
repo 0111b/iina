@@ -1,4 +1,4 @@
-/* 
+/*
   KeyBinding.strings
   iina
 
@@ -37,7 +37,8 @@
 "iina.flip" = "フリップ(垂直)";
 "iina.mirror" = "ミラー(水平)";
 
-"iina.toggle-pip" = "Toggle Picture-in-Picture";
+"iina.toggle-pip" = "ピクチャ・イン・ピクチャ切り替え";
+"iina.toggle-music-mode" = "ミュージュックモード切り替え";
 "iina.open-file" = "ファイルを開く";
 "iina.open-url" = "URLから開く";
 "iina.video-panel" = "ビデオ パネル";
@@ -45,10 +46,14 @@
 "iina.sub-panel" = "字幕 パネル";
 "iina.playlist-panel" = "プレイリスト パネル";
 "iina.chapter-panel" = "チャプタ パネル";
-"iina.toggle-flip" = "フリップ(垂直)";
-"iina.toggle-mirror" = "ミラー(水平)";
+"iina.bigger-window" = "ウィンドウを拡大";
+"iina.smaller-window" = "ウィンドウを縮小";
+"iina.fit-to-screen" = "画面に合わせる";
+"iina.toggle-flip" = "フリップ (垂直)";
+"iina.toggle-mirror" = "ミラー (水平)";
 "iina.save-playlist" = "現在のプレイリストを保存";
-"iina.delete-current-file" = "現在のファイルを削除";
+"iina.delete-current-file" = "現在のファイルをゴミ箱に移動";
+"iina.delete-current-file-hard" = "現在のファイルを直接削除";
 "iina.find-online-subs" = "オンラインで字幕を探す";
 "iina.save-downloaded-sub" = "ダウンロードした字幕を保存";
 
@@ -65,15 +70,15 @@
 
 "relative" = "秒";
 "absolute" = "秒";
-"absolute-percent" = "%";
-"relative-percent" = "%";
 "relative+exact" = "秒 (精密)";
 "relative-percent+exact" = "% (精密)";
 "absolute+keyframe" = "s (キーフレーム)";
 "absolute-percent+keyframe" = "% (キーフレーム)";
 
 "opt.pause" = "一時停止";
-"opt.speed" = "速度";
+"opt.speed" = "再生速度";
+
+"opt.window-scale" = "ウィンドウの倍率";
 
 "opt.video" = "ビデオトラック";
 "opt.video-aspect" = "ビデオアスペクト";
@@ -99,7 +104,6 @@
 "opt.ontop" = "最前面に固定";
 
 "opt.chapter" = "チャプタ";
-
 
 "read.set" = "{{property}}に{{value}}を設定";
 "read.add" = "{{property}} {{value}}";

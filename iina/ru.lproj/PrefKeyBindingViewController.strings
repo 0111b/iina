@@ -7,35 +7,23 @@
 /* Class = "NSTableColumn"; headerCell.title = "Action"; ObjectID = "4Bn-MF-dfY"; */
 "4Bn-MF-dfY.headerCell.title" = "Действие";
 
-/* Class = "NSButtonCell"; title = "New..."; ObjectID = "JYL-hr-KZT"; */
-"JYL-hr-KZT.title" = "Новая…";
+/* Class = "NSButtonCell"; title = "Import an existing config file"; ObjectID = "6cO-C0-33g"; */
+"6cO-C0-33g.title" = "Импортировать существующий файл конфигурации";
 
 /* Class = "NSTableColumn"; headerCell.title = "Key"; ObjectID = "JwC-60-7Hp"; */
 "JwC-60-7Hp.headerCell.title" = "Клавиша";
 
-/* Class = "NSTextFieldCell"; title = "All following settings will require restarting IINA to take effect."; ObjectID = "Mxa-CP-JlM"; */
-"Mxa-CP-JlM.title" = "Эти настройки вступят в силу после перезапуска IINA.";
-
-/* Class = "NSButtonCell"; title = "Delete this config file"; ObjectID = "QAL-MQ-b0l"; */
-"QAL-MQ-b0l.title" = "Удалить этот файл конфигурации";
-
-/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "aXG-QD-GyW"; */
-"aXG-QD-GyW.title" = "Text Cell";
-
 /* Class = "NSTextFieldCell"; title = "Configuration:"; ObjectID = "au5-6f-s55"; */
 "au5-6f-s55.title" = "Конфигурация:";
-
-/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "c46-i5-iw0"; */
-"c46-i5-iw0.title" = "Text Cell";
-
-/* Class = "NSButtonCell"; title = "Enable Apple Remote support"; ObjectID = "e70-25-5E4"; */
-"e70-25-5E4.title" = "Включить поддержку Apple Remote";
 
 /* Class = "NSButtonCell"; title = "Reveal config file in Finder"; ObjectID = "gDo-JL-a9k"; */
 "gDo-JL-a9k.title" = "Показать файл конфигурации в Finder";
 
-/* Class = "NSButtonCell"; title = "Duplicate..."; ObjectID = "gpZ-Rh-DMn"; */
+/* Class = "NSButtonCell"; title = "Duplicate…"; ObjectID = "gpZ-Rh-DMn"; */
 "gpZ-Rh-DMn.title" = "Дублировать…";
 
-/* Class = "NSBox"; title = "Box"; ObjectID = "mLe-eI-lIk"; */
-"mLe-eI-lIk.title" = "Box";
+/* Class = "NSButton"; ibShadowedToolTip = "Show the raw mpv key code and command."; ObjectID = "l2M-TH-eCt"; */
+"l2M-TH-eCt.ibShadowedToolTip" = "Показать исходный код mpv-клавиш и команду.";
+
+/* Class = "NSTextFieldCell"; title = "Settings"; ObjectID = "veZ-Si-Hv5"; */
+"veZ-Si-Hv5.title" = "Настройки";

@@ -1,4 +1,3 @@
-
 /* Class = "NSButtonCell"; title = "Use media keys"; ObjectID = "2WY-CR-baD"; */
 "2WY-CR-baD.title" = "メディアキーを使用";
 
@@ -8,26 +7,14 @@
 /* Class = "NSTableColumn"; headerCell.title = "Action"; ObjectID = "4Bn-MF-dfY"; */
 "4Bn-MF-dfY.headerCell.title" = "アクション";
 
-/* Class = "NSButtonCell"; title = "New…"; ObjectID = "JYL-hr-KZT"; */
-"JYL-hr-KZT.title" = "新規作成…";
+/* Class = "NSButtonCell"; title = "Import an existing config file"; ObjectID = "6cO-C0-33g"; */
+"6cO-C0-33g.title" = "既存の設定ファイルをインポートする";
 
 /* Class = "NSTableColumn"; headerCell.title = "Key"; ObjectID = "JwC-60-7Hp"; */
 "JwC-60-7Hp.headerCell.title" = "キー";
 
-/* Class = "NSButtonCell"; title = "Delete this config file"; ObjectID = "QAL-MQ-b0l"; */
-"QAL-MQ-b0l.title" = "設定ファイルの削除";
-
-/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "aXG-QD-GyW"; */
-"aXG-QD-GyW.title" = "Text Cell";
-
 /* Class = "NSTextFieldCell"; title = "Configuration:"; ObjectID = "au5-6f-s55"; */
 "au5-6f-s55.title" = "設定:";
-
-/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "c46-i5-iw0"; */
-"c46-i5-iw0.title" = "Text Cell";
-
-/* Class = "NSButtonCell"; title = "Enable Apple Remote support"; ObjectID = "e70-25-5E4"; */
-"e70-25-5E4.title" = "Appleリモートサポートを有効化";
 
 /* Class = "NSButtonCell"; title = "Reveal config file in Finder"; ObjectID = "gDo-JL-a9k"; */
 "gDo-JL-a9k.title" = "設定ファイルのフォルダをFinderで開く";
@@ -35,5 +22,8 @@
 /* Class = "NSButtonCell"; title = "Duplicate…"; ObjectID = "gpZ-Rh-DMn"; */
 "gpZ-Rh-DMn.title" = "複製…";
 
-/* Class = "NSBox"; title = "Box"; ObjectID = "mLe-eI-lIk"; */
-"mLe-eI-lIk.title" = "Box";
+/* Class = "NSButton"; ibShadowedToolTip = "Show the raw mpv key code and command."; ObjectID = "l2M-TH-eCt"; */
+"l2M-TH-eCt.ibShadowedToolTip" = "mpvのRAWキーコードとコマンドを表示します。";
+
+/* Class = "NSTextFieldCell"; title = "Settings"; ObjectID = "veZ-Si-Hv5"; */
+"veZ-Si-Hv5.title" = "設定";

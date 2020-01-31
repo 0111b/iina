@@ -1,4 +1,4 @@
-/* 
+/*
   KeyBinding.strings
   iina
 
@@ -7,7 +7,7 @@
 */
 
 "cmd.ignore" = "Ignorieren";
-"cmd.seek" = "Spulen";
+"cmd.seek" = "Spule";
 "cmd.revert-seek" = "Spulen widerrufen";
 "cmd.set" = "Setze";
 "cmd.cycle" = "Wechsle";
@@ -23,7 +23,7 @@
 "cmd.playlist-move" = "Wiedergabelisteneintrag bewegen";
 "cmd.playlist-clear" = "Wiedergabeliste leeren";
 "cmd.playlist-remove" = "Aus Wiedergabeliste entfernen";
-"cmd.playlist-shuffle" = "Zufällig";
+"cmd.playlist-shuffle" = "Zufällige Wiedergabe";
 "cmd.write-watch-later-config" = "Wiedergabeverlauf sichern";
 "cmd.stop" = "Stoppen";
 "cmd.quit" = "Beenden";
@@ -37,18 +37,23 @@
 "iina.flip" = "Drehen";
 "iina.mirror" = "Spiegeln";
 
-"iina.toggle-pip" = "Bild-in-Bild ein/aus";
+"iina.toggle-pip" = "Bild-in-Bild ein-/ausschalten";
+"iina.toggle-music-mode" = "Musikmodus ein-/ausschalten";
 "iina.open-file" = "Datei öffnen";
-"iina.open-url" = "URL öffnen";
-"iina.video-panel" = "Videopanel";
-"iina.audio-panel" = "Audiopanel";
-"iina.sub-panel" = "Untertitelpanel";
-"iina.playlist-panel" = "Wiedergabelistenpanel";
-"iina.chapter-panel" = "Kapitelpanel";
-"iina.toggle-flip" = "Drehen ein/aus";
-"iina.toggle-mirror" = "Spiegeln ein/aus";
+"iina.open-url" = "Adresse öffnen";
+"iina.video-panel" = "Videoeinstellungen ein-/ausblenden";
+"iina.audio-panel" = "Audioeinstellungen ein-/ausblenden";
+"iina.sub-panel" = "Untertiteleinstellungen ein-/ausblenden";
+"iina.playlist-panel" = "Wiedergabeliste ein-/ausblenden";
+"iina.chapter-panel" = "Kapitel ein-/ausblenden";
+"iina.bigger-window" = "Fenster vergrößern";
+"iina.smaller-window" = "Fenster verkleinern";
+"iina.fit-to-screen" = "An Bildschirm anpassen";
+"iina.toggle-flip" = "Drehen ein-/ausschalten";
+"iina.toggle-mirror" = "Spiegeln ein-/ausschalten";
 "iina.save-playlist" = "Aktuelle Wiedergabeliste sichern";
 "iina.delete-current-file" = "Wiedergegebene Datei löschen";
+"iina.delete-current-file-hard" = "Wiedergegebene Datei unwiderruflich löschen";
 "iina.find-online-subs" = "Online nach Untertiteln suchen";
 "iina.save-downloaded-sub" = "Geladene Untertitel sichern";
 
@@ -63,10 +68,8 @@
 "backward" = "rückwärts";
 "seek-to" = "zu";
 
-"relative" = "s";
-"absolute" = "s";
-"absolute-percent" = "%";
-"relative-percent" = "%";
+"relative" = "Sekunden";
+"absolute" = "Sekunden";
 "relative+exact" = "s (genau)";
 "relative-percent+exact" = "% (genau)";
 "absolute+keyframe" = "s (Keyframe)";
@@ -74,6 +77,8 @@
 
 "opt.pause" = "Pausieren";
 "opt.speed" = "Geschwindigkeit";
+
+"opt.window-scale" = "Fenstergröße";
 
 "opt.video" = "Videospur";
 "opt.video-aspect" = "Seitenverhältnis";
@@ -99,7 +104,6 @@
 "opt.ontop" = "Oben schweben";
 
 "opt.chapter" = "Kapitel";
-
 
 "read.set" = "Setze {{property}} auf {{value}}";
 "read.add" = "{{property}} {{value}}";
