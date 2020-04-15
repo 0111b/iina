@@ -296,7 +296,8 @@ class MainWindowController: PlayerWindowController {
     .blackOutMonitor,
     .useLegacyFullScreen,
     .displayTimeAndBatteryInFullScreen,
-    .controlBarToolbarButtons
+    .controlBarToolbarButtons,
+    .alwaysShowOnTopIcon
   ]
 
   override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
@@ -348,6 +349,8 @@ class MainWindowController: PlayerWindowController {
       if let newValue = change[.newKey] as? [Int] {
         setupOSCToolbarButtons(newValue.compactMap(Preference.ToolBarButton.init(rawValue:)))
       }
+    case PK.alwaysShowOnTopIcon.rawValue:
+      updateOnTopIcon()
     default:
       return
     }
