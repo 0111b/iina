@@ -2505,8 +2505,10 @@ extension MainWindowController: PIPViewControllerDelegate {
 
     // If the video is paused, it will end up in a weird state due to the
     // animation. By forcing a redraw it will keep its paused image throughout.
+    // (At least) in 10.15, presentAsPictureInPicture: behaves asynchronously.
+    // Therefore we should wait until the view is moved to the PIP superview.
     if player.info.isPaused {
-      videoView.videoLayer.draw(forced: true)
+      videoView.pendingRedrawAfterEnteringPIP = true
     }
 
     if let window = self.window {
@@ -2564,7 +2566,7 @@ extension MainWindowController: PIPViewControllerDelegate {
     isWindowHidden = false
   }
 
-  func prepareForClosure(_ pip: PIPViewController) {
+  func prepareForPIPClosure(_ pip: PIPViewController) {
     guard pipStatus == .inPIP else { return }
     // This is called right before we're about to close the PIP
     pipStatus = .intermediate
@@ -2589,11 +2591,11 @@ extension MainWindowController: PIPViewControllerDelegate {
   }
 
   func pipWillClose(_ pip: PIPViewController) {
-    prepareForClosure(pip)
+    prepareForPIPClosure(pip)
   }
 
   func pipShouldClose(_ pip: PIPViewController) -> Bool {
-    prepareForClosure(pip)
+    prepareForPIPClosure(pip)
     return true
   }
 
