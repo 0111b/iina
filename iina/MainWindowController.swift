@@ -2019,8 +2019,6 @@ class MainWindowController: PlayerWindowController {
   func adjustFrameByVideoSize() {
     guard let window = window else { return }
 
-    videoView.videoLayer.draw(forced: true)
-
     let (width, height) = player.videoSizeForDisplay
 
     // set aspect ratio
