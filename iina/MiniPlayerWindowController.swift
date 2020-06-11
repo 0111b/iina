@@ -57,6 +57,8 @@ class MiniPlayerWindowController: PlayerWindowController, NSPopoverDelegate {
 
   private var originalWindowFrame: NSRect!
 
+  override var mouseActionDisabledViews: [NSView?] {[backgroundView, playlistWrapperView] as [NSView?]}
+
   // MARK: - Initialization
 
   override func windowDidLoad() {
@@ -137,21 +139,6 @@ class MiniPlayerWindowController: PlayerWindowController, NSPopoverDelegate {
   override func mouseDown(with event: NSEvent) {
     window?.makeFirstResponder(window)
     super.mouseDown(with: event)
-  }
-
-  override func mouseUp(with event: NSEvent) {
-    guard !isMouseEvent(event, inAnyOf: [backgroundView]) else { return }
-    super.mouseUp(with: event)
-  }
-
-  override func rightMouseUp(with event: NSEvent) {
-    guard !isMouseEvent(event, inAnyOf: [backgroundView]) else { return }
-    super.rightMouseUp(with: event)
-  }
-
-  override func otherMouseUp(with event: NSEvent) {
-    guard !isMouseEvent(event, inAnyOf: [backgroundView]) else { return }
-    super.otherMouseUp(with: event)
   }
 
   override func scrollWheel(with event: NSEvent) {
